@@ -4,7 +4,7 @@
 */
 
 // Amount of Snowflakes
-var snowMax = 35;
+var snowMax = 50;
 
 // Snowflake Colours
 var snowColor = ["#DDD", "#EEE"];
@@ -16,10 +16,10 @@ var snowEntity = "&#x2022;";
 var snowSpeed = 0.75;
 
 // Minimum Flake Size
-var snowMinSize = 8;
+var snowMinSize = 15;
 
 // Maximum Flake Size
-var snowMaxSize = 24;
+var snowMaxSize = 30;
 
 // Refresh Rate (in milliseconds)
 var snowRefresh = 50;
