@@ -23,7 +23,7 @@
 
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <script src="build/aframe-ar.js"></script>
- 
+
 
 
   <!-- particles system component -->
@@ -34,24 +34,23 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
   <script src="build/aframe-speech-command-component.js"></script>
   <script>if (annyang) {
-    // Let's define our first command. First the text we expect, and then the function it should call
-    var commands = {
-      'show tps report': function() {
-        $('#tpsreport').animate({bottom: '-100px'});
+      var commands = {
+        'Hello': greetings
+      };
+
+      annyang.addCommands(commands);
+      annyang.start();
+      function greetings() {
+
+
       }
-    };
-  
-    // Add our commands to annyang
-    annyang.addCommands(commands);
-  
-    // Start listening. You can call this here, or attach this call to an event, button, etc.
-    annyang.start();
-  }
-  <a-entity id="snow1"
-              speech-command__show="command: start; type: attribute; attribute: visible; value: true;"
-              speech-command__hide="command: stop; type: attribute; attribute: visible; value: true;">
-</a-entity>
+    }
+    <a-entity id="snow1"
+      speech-command__show="command: start; type: attribute; attribute: visible; value: true;"
+      speech-command__hide="command: stop; type: attribute; attribute: visible; value: true;">
+    </a-entity>
   </script>
+
   <body style="margin : 0px; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
@@ -63,7 +62,7 @@
         <a-entity id="sphere" geometry="primitive: sphere; width: 0.2; depth: 0.2; height: 0.2" position="-2 -2 0"
           material="color: #FF0000"></a-entity>
       </a-marker>
-      
+
       <a-entity camera></a-entity>
       <a-entity id="annyang" annyang-speech-recognition></a-entity>
     </a-scene>
