@@ -1,43 +1,55 @@
 <!doctype html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <title>Snow.js</title>
-        <script src="snow.js" id="snow1"></script>
-    <style>html,body{margin:0;height:100%;}body{background:#6B92B9}</style>
-  </head>
-  <body>
-     
-      <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <script src="build/aframe-ar.js"></script>
-    
-    <!-- particles system component -->
-    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-      <script src="snow.js"></script>  
-    <!-- speech command component -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
-    <script src="build/aframe-speech-command-component.js"></script> 
-    
 
-    <body style="margin : 0px; overflow: hidden;">
-        <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
-            <a-entity id="snow" 
-              speech-command__show="command: start; type: attribute; targetElement: #snow1;  attribute: visible; value: true;"
-              speech-command__hide="command: stop; type: attribute; targetElement: #snow1; attribute: visible; value: true;">
-</a-entity>
-        <a-marker preset="hiro">       
-   <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2" position="2 2 0" material="color: #4CC3D9"></a-entity>
-            <a-entity id="cylinder" geometry="primitive: cylinder; width: 0.2; depth: 0.2; height: 0.2" position="0 0 0" material="color: #FFFFFF"></a-entity>
-            <a-entity id="sphere" geometry="primitive: sphere; width: 0.2; depth: 0.2; height: 0.2" position="-2 -2 0" material="color: #FF0000"></a-entity>
-   
-           
-        </a-marker>
-        <a-entity camera></a-entity>
-        </a-scene>
-    </body>  
+<head>
+  <meta charset="utf-8">
+  <title>Snow.js</title>
+  <script src="snow.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      background: #6B92B9
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="build/aframe-ar.js"></script>
+ 
+
+
+  <!-- particles system component -->
+  <script
+    src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  <script src="snow.js"></script>
+  
+  <!-- speech command component -->
+  <script src="aframe-speech-command-component.min.js"></script>
+  <script src="aframe-speech-command-component.js"></script>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+      <a-marker preset="hiro">
+        <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2" position="2 2 0"
+          material="color: #4CC3D9"></a-entity>
+        <a-entity id="cylinder" geometry="primitive: cylinder; width: 0.2; depth: 0.2; height: 0.2" position="0 0 0"
+          material="color: #FFFFFF"></a-entity>
+        <a-entity id="sphere" geometry="primitive: sphere; width: 0.2; depth: 0.2; height: 0.2" position="-2 -2 0"
+          material="color: #FF0000"></a-entity>
+      </a-marker>
+      
+      <a-entity camera></a-entity>
+      
+    </a-scene>
+  </body>
+
 </html>
