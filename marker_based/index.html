@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Snow.js</title>
-  <script src="snow.js"></script>
+  <script src="snow.js" id="snow1"></script>
   <style>
     html,
     body {
@@ -47,6 +47,10 @@
     // Start listening. You can call this here, or attach this call to an event, button, etc.
     annyang.start();
   }
+  <a-entity id="snow1"
+              speech-command__show="command: start; type: attribute; attribute: visible; value: true;"
+              speech-command__hide="command: stop; type: attribute; attribute: visible; value: true;">
+</a-entity>
   </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
