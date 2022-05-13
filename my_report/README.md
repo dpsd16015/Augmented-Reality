@@ -9,14 +9,12 @@
 In this project we were asked to utilize augmented reality tools in order to make looking at the pc camera into an interactive experience
 
 # Summary
-Making it snow as well as inserting the hiro function and speech commands 
 
 # 1st Deliverable
-Firstly I inserted a .js file from a outer source and then I made use of it through the source code. Afterwards I created shapes through the code and inserted annyang speech recognition as well as commands.
-
+Πρώτα τοποθέτησα τα διαφορετικά σχήματα με κώδικα και άλλαξα τις διαστάσεις τη θέση καθώς και τα χρώματα. Μετά πρόσθεσα το snow.js και το δήλωσα στο index καθώς και ρύθμισα την ταχύτητα πτώσης και το μέγεθως και το σχήμα από το java script. Έπειτα χρησιμοποίησα την βιβλιοθήκη annyang για να δώσω εντολή να ξεκινάει να χιονίζει οταν ο χρήστης λέει start και να σταματάει όταν λέει stop.
 
 # 2nd Deliverable
-
+Αρχικα κατεβασα τα png αρχεια και τα εκανα upload στη σελιδα AR.js Marker Training ετσι ωστε να τα κανω patt αρχεια. Επιπλεον εκανα edit το dpsd ετσι ωστε να δειχνει το δικο μου και αφου το εκανα και αυτο marker τα ανεβασα ολα στο github στα assets. Επειτα τα καλεσα στον κωδικα με το url τους και τους εβαλα θεση και μεγεθος καθως και χρωμα. Για να κανω το animation χρησιμοποιησα εντολη a-entity και τα 3d γραφικα τα εκανα με primitive.
 
 # 3rd Deliverable 
 
@@ -27,3 +25,5 @@ Firstly I inserted a .js file from a outer source and then I made use of it thro
 # Sources
 https://www.cssscript.com/tag/snow/#:~:text=1%20Comment-,snow.,falling%20effect%20on%20the%20webpage.
 https://www.talater.com/annyang/#:~:text=annyang%20is%20a%20tiny%20javascript,your%20site%20with%20voice%20commands.
+https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
+https://commons.wikimedia.org/wiki/File:Kanji_marker_ARjs.png
