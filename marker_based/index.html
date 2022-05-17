@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Augmented_Reality</title>
+        <script src="snow.js"></script>
+        <style>
+            body {margin: 0; height: 100%; background: #ded7e0;}
+        </style>
+    </head>
+    
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
@@ -19,7 +27,9 @@
     renderer="logarithmicDepthBuffer: true;"
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-        
+        <a-marker preset="hiro">
+            <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2" position="0 0 0" material="color: #4CC3D9"></a-entity>
+        </a-marker>
             <a-marker type='pattern' url='assets\pattern-dpsd16015.patt'>
 
             <a-text value="Odysseas Voutsaras" scale="2 2 1" position="0 0 0">
@@ -44,5 +54,3 @@
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
-    </body>
-</html>
