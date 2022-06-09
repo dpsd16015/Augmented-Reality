@@ -17,7 +17,14 @@
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
 
-        <a-entity gps-entity-place="latitude: 37.44508605013452; longitude: 24.94274274667849;" gltf-model="./assets/clock/scene.gltf" rotation="0 180 0" animation-mixer scale="0.3 0.3 0.3"/>
+       <a-assets>
+             <img id="dhmarxeio" src="assets/dhmarxeio.jpg">
+		
+        </a-assets>
+
+        <a-entity gps-entity-place="latitude:  37.44508605013452; longitude: 24.94274274667849;">
+            <a-image src="#asteria" position="0 1 -2" rotation="0 0 0"></a-image>
+        </a-entity>
         
         
         
