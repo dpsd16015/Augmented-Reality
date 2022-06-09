@@ -8,6 +8,21 @@
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <script src='build/aframe-ar-nft.js'></script>
 </head>
+	<script>
+
+AFRAME.registerComponent("text-show", {
+	init: function () {
+	let toggle = false
+	this.el.addEventListener("click", (e) => {
+	let entity = document.querySelectorAll(".clickable")
+	entity.forEach(function (el) {
+	el.setAttribute("visible", toggle)
+                    })
+                    toggle = !toggle
+                })
+            }
+        })
+    </script>
 
 
 <body style='margin: 0; overflow: hidden;'>
@@ -15,16 +30,33 @@
         vr-mode-ui="enabled: false"
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
+	  
+      <a-assets>
+             <a-asset-item id="Dhmarxeio" src="assets/clock/scene.gltf"></a-asset-item>
+      </a-assets>
+	    <a-entity position="0 0 -120">
+
+        <a-entity gltf-model="#Mouse" scale="25 25 25" class="click" 
+               animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
+                gps-entity-place="latitude: 37.44508605013452; longitude: 24.94274274667849;" text-show>
+                
+                <a-entity class="clickable"
+                          position="0 1 1"
+                          text="color: blue; font-size:4; font-type: bold; align: center; value: Dhmarxeio Ermoupolh ;
+                           width: 3; height: 3;  letterSpacing: 5;" visible="false">
+                        </a-entity>
+            </a-entity>
+        </a-entity>
 
         <a-box
-            material="color: red;"
+            material="color: blue;"
             scale="20 20 20"
-            gps-entity-place="latitude: 44.506477; longitude: 11.301524;">
+            gps-entity-place="latitude: 37.44508605013452; longitude: 24.94274274667849;">
         </a-box>
 
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 1; maxDistance: 700;"
+            gps-camera="simulateLatitude: 37.44508605013452; simulateLongitude: 24.94274274667849; minDistance: 1; maxDistance: 500;"
         >
 		</a-camera>
 	</a-scene>
